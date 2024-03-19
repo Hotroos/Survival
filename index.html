@@ -6,21 +6,20 @@
 
         <title>Survival Site</title>
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
-
-        <script src="jquery-3.7.1.min.js"></script>
-
-        <!-- Import the styles & scripts  -->
-<script src="cookiebanner.script.js"></script>
-<link rel="stylesheet" href="cookiebanner.style.css">
-
-<!-- Initialize Cookie Notice  -->
-<script>
-$(document).ready(function() {
-    cookiebanner.init();
-});     
-</script>
+        <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Cookie Banner -->
+    <link rel="stylesheet" href="cookiebanner.style.css">
+    <script src="cookiebanner.script.js"></script>
+    <style>
+        *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;}
+    </style>
+    <script>
+        $(document).ready(function() {
+            cookieBanner.init();
+        });
+    </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-89YY3TFDS8"></script>
 <script>
