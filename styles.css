@@ -6,3 +6,19 @@ h1 {
 p {
     text-align: center;
 }
+ body {
+    font-family: Arial, sans-serif;
+ }
+ header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+  main {
+    margin: 20px;
+}
+  footer {
+    background-color: #f8f9fa;
+     padding: 20px;
+     text-align: center;
+}
