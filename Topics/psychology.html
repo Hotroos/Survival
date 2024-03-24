@@ -16,6 +16,34 @@
 
 <body>
     <h1>Hello</h1>
+       <script>
+        // Function to fetch and parse XML data
+        function fetchData() {
+            fetch('/Survival/Info/psychology.xml')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+                    
+                    // Accessing data from XML
+                    const items = xmlDoc.getElementsByTagName("item");
+                    let output = "<ul>";
+                    for (let i = 0; i < items.length; i++) {
+                        output += "<li>" + items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</li>";
+                    }
+                    output += "</ul>";
+                    
+                    // Printing data to HTML
+                    document.getElementById("dataContainer").innerHTML = output;
+                })
+                .catch(error => {
+                    console.error('Error fetching XML data:', error);
+                });
+        }
+
+        // Call fetchData function when the page loads
+        window.onload = fetchData;
+    </script>
 </body>
 
 </html>
