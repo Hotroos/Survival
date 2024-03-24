@@ -8,6 +8,9 @@ p {
 }
  body {
     font-family: Arial, sans-serif;
+     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
  }
  header {
     background-color: #f8f9fa;
@@ -16,9 +19,13 @@ p {
 }
   main {
     margin: 20px;
+      flex: 1;
 }
   footer {
     background-color: #f8f9fa;
      padding: 20px;
      text-align: center;
 }
+
+
+
