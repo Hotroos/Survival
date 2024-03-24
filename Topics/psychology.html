@@ -19,7 +19,7 @@
        <script>
         // Function to fetch and parse XML data
         function fetchData() {
-            fetch('/Survival/Info/psychology.xml')
+            fetch('https://hotroos.github.io/Survival/Info/psychology.xml')
                 .then(response => response.text())
                 .then(data => {
                     const parser = new DOMParser();
