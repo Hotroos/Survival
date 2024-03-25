@@ -41,7 +41,12 @@
         }
 
         // Call fetchData function when the page loads
-        window.onload = fetchData;
+        window.onload = function() {
+            fetchData();
+            var h1 = document.querySelector("h1");
+            var dataContainer = document.getElementById("dataContainer");
+            h1.parentNode.insertBefore(dataContainer, h1.nextSibling);
+        };
     </script>
 </body>
 
