@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -24,16 +24,8 @@
             fetch('https://hotroos.github.io/Survival/Info/psychology.txt')
                 .then(response => response.text())
                 .then(data => {
-                    // Assuming each line in the txt file is a separate item
-                    const items = data.split('\n');
-                    let output = "<ul>";
-                    for (let i = 0; i < items.length; i++) {
-                        output += "<li>" + items[i] + "</li>";
-                    }
-                    output += "</ul>";
-                    
                     // Printing data to HTML
-                    document.getElementById("dataContainer").innerHTML = output;
+                    document.getElementById("dataContainer").innerText = data;
                 })
                 .catch(error => {
                     console.error('Error fetching TXT data:', error);
