@@ -6,32 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Psychology</title>
     <link rel="stylesheet" href="topics.css">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-89YY3TFDS8"></script>
-    <style>
-        /* Add your desired font size and family here */
-        .custom-font {
-            font-size: 20px; /* Change this to your desired font size */
-            font-family: Arial, sans-serif; /* Change this to your desired font family */
+    <script> window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
         }
-    </style>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);
-         } gtag('js', new Date());
+        gtag('js', new Date());
         gtag('config', 'G-89YY3TFDS8');
     </script>
 </head>
+
 <body>
-    <h1>Hello</h1>
-    <div id="dataContainer" class="custom-font"></div>
+    <h1>Welcome to Psychology</h1>
+    <div id="dataContainer"></div>
     <script>
-        // Function to fetch and parse TXT data
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-89YY3TFDS8');
+
         function fetchData() {
             fetch('https://hotroos.github.io/Survival/Info/psychology.txt')
                 .then(response => response.text())
                 .then(data => {
-                    // Printing data to HTML
                     document.getElementById("dataContainer").innerText = data;
                 })
                 .catch(error => {
@@ -39,13 +38,7 @@
                 });
         }
 
-        // Call fetchData function when the page loads
-        window.onload = function() {
-            fetchData();
-            var h1 = document.querySelector("h1");
-            var dataContainer = document.getElementById("dataContainer");
-            h1.parentNode.insertBefore(dataContainer, h1.nextSibling);
-        };
+        window.onload = fetchData;
     </script>
 </body>
 
