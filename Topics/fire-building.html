@@ -16,5 +16,20 @@
   </head>
   <body>
     <h1>Fire Building</h1>
+    <div id="dataContainer"></div>
+    <script>
+        function fetchData() {
+            fetch('https://hotroos.github.io/Survival/Info/fire-building.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("dataContainer").innerText = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching TXT data:', error);
+                });
+        }
+
+        window.onload = fetchData;
+    </script>
   </body>
 </html>
