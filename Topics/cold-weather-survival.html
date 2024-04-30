@@ -16,9 +16,10 @@
   </head>
   <body>
     <h1>Cold Weather Survival</h1>
+     <div id="dataContainer"></div>
     <script>
-      function fetchData() {
-            fetch('https://hotroos.github.io/Survival/Info/cold-weather.txt')
+        function fetchData() {
+            fetch('https://hotroos.github.io/Survival/Info/fire-building.txt')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("dataContainer").innerText = data;
