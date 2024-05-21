@@ -5,20 +5,9 @@
             margin: 0 auto;
             padding: 20px;
         }
-	header {
-            background-color: #B8C66C;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
 	body{
-	    background-color: lightblue;
+	    background-color: #fff;
 	}
-	section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
         h3 {
           text-align: center
         }
